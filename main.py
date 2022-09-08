@@ -1,4 +1,4 @@
-import httpx
+import httpx, requests, os
 import websocket
 import base64
 import json
